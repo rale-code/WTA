@@ -5,7 +5,7 @@
 	font-family: 'Raleway', sans-serif;
 }
 
-li, a, input {
+.head li, a, input {
 	font-weight: 900;
 	font-size: 16px;
 	text-decoration: none;
@@ -92,12 +92,10 @@ header {
 	color: white;
 	opacity: 65%;
 }
-/* nav */
 .picture img {
 	width: 100%;
 	height: 200px;
 }
-
 .picture h1 {
 	color: white;
 	position: absolute;
@@ -106,45 +104,6 @@ header {
 	font-size: 54px;
 	font-weight: bold;
 }
-main {
-	padding-left: 70px; 
-	padding-top: 25px;
-}
-
-.player img {
-	width: 280px;
-	height: 200px;
-}
-
-.player {
-	display: inline-block;
-	font-size: 24px;
-	padding-left: 40px;
-	cursor: pointer;
-}
-
-.player h3 {
-	color: #696969;
-}
-
-.player::after {
-    content: '';
-    display: block;
-    width: 0;
-    height: 4px;
-    background: #8FBC8F;
-    transition: width .6s;
-}
-
-.player:hover::after {
-    width: 100%;
-    //transition: width .3s;
-}
-
-.player:hover {
-	color: #8B008B;
-}
-
 .icons {
 	width: 100%;
 	position: absolute;
@@ -209,4 +168,3 @@ footer img{
 	opacity: 50%;
 	margin-bottom: 10px;
 }
-
