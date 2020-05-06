@@ -1,5 +1,5 @@
 <header class="head">
-		<img src="https://upload.wikimedia.org/wikipedia/commons/b/bf/WTA_logo_2010.svg" class="logo">
+		<img src="https://logo-logos.com/wp-content/uploads/2017/02/ATP_logo.png" class="logo">
 		<nav>
 			<ul class="link">
 				<li><a class="cool-link" href="index.php">Players</a></li>
@@ -14,4 +14,6 @@
 		</div>	
 </header> 
 <div class="picture">
-		<img src="https://wallpaperaccess.com/full/1687819.jpg">
+		<img src="https://images.ctfassets.net/usf1vwtuqyxm/dpmDSBWkWGFebViZKJuG7/c488da0a5c57abcaf6dcade349d14347/Feature-Hub-Copy-compressor.png?fm=jpg">
+		<h1><?= $title ?></h1>
+</div>

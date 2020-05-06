@@ -1,31 +1,31 @@
 <?php
-	include 'includes/dbh.inc.php';
+	include 'query/player.php';
+	include 'query/country.php';
 
-	$sql = "SELECT * FROM player";
-	$result = $conn->query($sql);
-	while ($row = $result->fetch_assoc()) {
-		$datas[] = $row;
-	}
+
+
 ?>
 <!DOCTYPE html>
 <html>
 <head>
 	<title>WTA</title>
+	<link rel="stylesheet" type="text/css" href="CSS/nav.css">
 	<link href="https://fonts.googleapis.com/css2?family=Raleway:wght@500&display=swap" rel="stylesheet">
 	<link rel="stylesheet" type="text/css" href="style.css">
 	<script src="https://kit.fontawesome.com/d3d792014f.js" crossorigin="anonymous"></script>
 </head>
 	<body>
-		<?php include 'templates/nav.php'?>
-			<h1>Active players</h1>
-		</div>
+		<?php 
+			$title = "Active players";
+			include 'templates/nav.php'
+		?>
 		<main>
-			<?php foreach($datas as $data): ?>
+			<?php foreach($players as $player): ?>
 			<div class="player">
-				<img src="<?php echo $data['img']; ?>">
-				<h5><?php echo $data['name']; ?></h5>
-				<h2><?php echo $data['surname']; ?></h2>
-				<h3><?php echo $data['country']; ?></h3>
+				<img src="<?= $player['img']; ?>">
+				<h4><?= $player['rank']; ?></h4>
+				<h4><?= $player['name'] ?></h4>
+				<h6><?= $player['points']; ?></h6>
 			</div>
 			<?php endforeach ?>
 		</main>

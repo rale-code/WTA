@@ -15,9 +15,11 @@
 				<a href="#" target="_blank" class="media-btn" id="weibo">
 					<i class="fab fa-weibo"></i>
 				</a>
-			</div>	
-			<br><img src="https://upload.wikimedia.org/wikipedia/commons/b/bf/WTA_logo_2010.svg">
+			</div>
+			<div class="ATP">	
+				<br><img src="https://cdn.worldvectorlogo.com/logos/atp-23243.svg">
+			</div>
 			<div class="last">
-				<p>© 2020 WTA TOUR, INC. | WTA AND THE WTA LOGO ARE TRADEMARKS OF THE WTA TOUR, INC.</p>
+				<p>© 2020 ATP TOUR, INC. | ATP AND THE ATP LOGO ARE TRADEMARKS OF THE ATP TOUR, INC.</p>
 			</div>		
 		</footer>

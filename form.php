@@ -3,21 +3,27 @@
 <head>
 	<title>Form</title>
 	<script src="https://kit.fontawesome.com/d3d792014f.js" crossorigin="anonymous"></script>
-	<link rel="stylesheet" type="text/css" href="templates/nav.css">
+	<link rel="stylesheet" type="text/css" href="CSS/nav.css">
+	<link rel="stylesheet" type="text/css" href="form.css">
 </head>
 <body>
 	<?php include 'templates/nav.php'?>
-	</div>
+	<?php $div = '</div>' ?>
 	<main>
-		<div>
-			<form action="add.php" method="post">
-				Name<input type="text" name="name"><br>
-				Surname<input type="text" name="surname"><br>
-				Country<input type="text" name="country"><br>
-				height<input type="text" name="height"><br>
-				Age<input type="text" name="age"><br>
-				Birthplace<input type="text" name="birthplace"><br>
-				Coach<input type="text" name="coach"><br>
+		<div class="form">
+			<form action="includes/add.php" method="post">
+				<label for="img">Image</label>
+				<input type="text" name="img" placeholder="img" id="img"><br>
+				<label for="name">Name</label>
+				<input type="text" name="name" id="name"><br>
+				<label for="surname">Surname</label>
+				<input type="text" name="surname" id="surname"><br>
+				<label for="counry">Country</label>
+				<input type="text" name="country" id="country"><br>
+				<label for="age">Age</label>
+				<input type="number" name="age" id="age"><br>
+				<label for="height">Height</label>
+				<input type="number" name="height" id="height" step=".01"><br>
 				<button>Submit</button>
 			</form>
 		</div>

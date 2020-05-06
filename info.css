@@ -1,0 +1,19 @@
+main {
+	justify-content: space-between;
+	display: flex;
+}
+.image img{
+	width: 60%;
+	margin-left: 150px;
+	margin-top: 30px;
+	background-color: #E6E6FA;
+}
+.info {
+	margin-right: 450px;
+	margin-top: 40px;
+	font-size: 29px;
+	color: #773dbd;
+}
+.info h1,h2,h3{
+	padding-top: 30px;
+}
