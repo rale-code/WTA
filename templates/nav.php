@@ -3,7 +3,7 @@
 		<nav>
 			<ul class="link">
 				<li><a class="cool-link" href="index.php">Players</a></li>
-				<li><a class="cool-link" href="info.php">Tournaments</a></li>
+				<li><a class="cool-link" href="tournaments.php">Tournaments</a></li>
 			</ul>
 		</nav>
 		<div class="search-box">

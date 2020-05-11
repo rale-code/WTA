@@ -3,8 +3,12 @@
 include 'includes/database.php';
 
 $players = null;
-$sql = "SELECT * FROM player";
-	$result = $conn->query($sql);
-	while ($row = $result->fetch_assoc()) {
+$sql = "SELECT player.name, player.points, player.rank, country.country, player.player_image, country_image
+		FROM player
+		INNER JOIN country
+		ON player.country_id=country.country_id
+		ORDER BY player.points DESC";
+		$result = $conn->query($sql);
+		while ($row = $result->fetch_assoc()) {
 		$players[] = $row;
 	}

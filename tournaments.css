@@ -1,0 +1,16 @@
+.picture h1 {
+	left: 38%;
+}
+
+.container img {
+	width: 25%;
+	margin: 0px 150px;
+	margin-top: 50px;
+}
+.container {
+	position: relative;
+}
+.tournament {
+	margin: 0px 190px; 
+	
+}

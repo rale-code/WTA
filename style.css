@@ -33,6 +33,14 @@ main {
 .player h3 {
 	color: #696969;
 }
+.player h5 {
+	padding-top: 3px;
+	padding-right: 5px;
+}
+.player h5 img{
+	width: 20px;
+	height: 15px;
+}
 
 .player::after {
     content: '';

@@ -2,7 +2,11 @@
 
 include_once 'database.php';
 
-$json = json_decode(file_get_contents("https://vbarbaresi.opendatasoft.com/api/records/1.0/search/?dataset=atp-rankings&sort=-current_rank&facet=current_rank&facet=player_country"));
+$json = json_decode(file_get_contents("https://vbarbaresi.opendatasoft.com/api/records/1.0/search/?dataset=atp-rankings&q=&rows=12&sort=-current_rank&facet=current_rank&facet=player_country"));
+
+//echo "<pre>";
+//die(var_dump($json));
+//echo "</pre>";
 
 foreach ($json->records as $player) {
 	$country = insertCountryIntoDatabase($player->fields->player_country);
@@ -23,10 +27,11 @@ function insertCountryIntoDatabase($name)
 
 	if (isset($country)) {
 		return $country;
-	}
+	} else {
 		
 	$sql = "INSERT INTO country (country) VAlUES ('{$name}');";
 	$GLOBALS['conn']->query($sql);
+	}
 }
 
 function insertPlayerIntoDatabase($name, $rank, $points)
@@ -35,7 +40,12 @@ function insertPlayerIntoDatabase($name, $rank, $points)
 	$player = $GLOBALS['conn']->query($sql)->fetch_assoc();
 	
 	if (isset($player)) {
-		// Update player's points and rank
+		$sql = "UPDATE player 
+				SET 
+    			points = '$points',
+    			rank = '$rank'
+				WHERE
+    			name = '$name';";
 	} else {
 		$sql = "INSERT INTO player (name, rank, points) VAlUES ('$name', '$rank', '$points');";
 		$GLOBALS['conn']->query($sql);
