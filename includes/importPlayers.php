@@ -10,11 +10,13 @@ $json = json_decode(file_get_contents("https://vbarbaresi.opendatasoft.com/api/r
 
 foreach ($json->records as $player) {
 	$country = insertCountryIntoDatabase($player->fields->player_country);
+	//die(var_dump($country['country_id']));
 
 	insertPlayerIntoDatabase(
 		$player->fields->player_name, 
 		$player->fields->current_rank, 
-		$player->fields->player_points
+		$player->fields->player_points,
+		$country['country_id']
 	);
 }
 
@@ -27,14 +29,14 @@ function insertCountryIntoDatabase($name)
 
 	if (isset($country)) {
 		return $country;
-	} else {
+	}  {
 		
-	$sql = "INSERT INTO country (country) VAlUES ('{$name}');";
+	$sql = "INSERT INTO country (country) VAlUES ('$name');";
 	$GLOBALS['conn']->query($sql);
 	}
 }
 
-function insertPlayerIntoDatabase($name, $rank, $points)
+function insertPlayerIntoDatabase($name, $rank, $points, $id)
 {
 	$sql = "SELECT * FROM player WHERE name='{$name}';";
 	$player = $GLOBALS['conn']->query($sql)->fetch_assoc();
@@ -47,7 +49,7 @@ function insertPlayerIntoDatabase($name, $rank, $points)
 				WHERE
     			name = '$name';";
 	} else {
-		$sql = "INSERT INTO player (name, rank, points) VAlUES ('$name', '$rank', '$points');";
+		$sql = "INSERT INTO player (name, rank, points, country_id) VAlUES ('$name', '$rank', '$points', '$id');";
 		$GLOBALS['conn']->query($sql);
 	}
 	
