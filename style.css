@@ -125,3 +125,17 @@ main {
 	margin-bottom: 10px;
 }
 
+.select select {
+	background: #778899;
+	color: #fff;
+	padding: 10px;
+	width: 250px; 
+	border: none;
+	font-size: 14px;
+	outline: none;
+	-webkit-appearance: button;
+	cursor: pointer;
+}
+.select button {
+	border: none; 
+}

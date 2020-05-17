@@ -1,9 +1,7 @@
 <?php
 	include 'query/player.php';
-
-
-
-
+	
+	$players = getAllPlayers();
 ?>
 <!DOCTYPE html>
 <html>
@@ -22,12 +20,16 @@
 		<main>
 			<div name="country_select">
 				<form action="query/selectByCountry.php" method="post">
-					<select name="name">
-						<?php foreach((array)$players as $player): ?>
-							<option><?= $player['country']; ?></option>
-						<?php endforeach ?>
-					</select>
-					<button>Select</button>
+					<div class="select">
+						<button>
+							<select name="name">
+								<option>Select country</option>
+								<?php foreach((array)$players as $player): ?>
+								<option><?= $player['country']; ?></option>
+								<?php endforeach ?>
+							</select>
+						</button>
+					</div>
 				</form>
 			</div>
 			<?php foreach((array)$players as $player): ?>

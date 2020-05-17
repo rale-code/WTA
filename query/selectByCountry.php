@@ -22,19 +22,15 @@ $sql = "SELECT player.name, player.points, player.rank, country.country, player.
 	<link rel="stylesheet" type="text/css" href="CSS/nav.css">
 	<link href="https://fonts.googleapis.com/css2?family=Raleway:wght@500&display=swap" rel="stylesheet">
 	<link rel="stylesheet" type="text/css" href="../style.css">
+	<link rel="stylesheet" type="text/css" href="../CSS/nav.css">
 	<script src="https://kit.fontawesome.com/d3d792014f.js" crossorigin="anonymous"></script>
 </head>
 	<body>
 		<?php 
 			$title = "Active players";
-			include 'templates/nav.php'
+			include '../templates/nav.php'
 		?>
 		<main>
-			<div name="country_select">
-				<form action="query/selectByCountry.php" method="post">
-					<button>Select</button>
-				</form>
-			</div>
 			<?php foreach((array)$options as $option): ?>
 			<div class="player">
 				<img src="<?= $option['player_image']; ?>">
@@ -45,7 +41,7 @@ $sql = "SELECT player.name, player.points, player.rank, country.country, player.
 			</div>
 			<?php endforeach ?>
 		</main>
-		<?php include 'templates/footer.php'?>
+		<?php include '../templates/footer.php'?>
 		<form action="includes/add.php" method="post">
 			<button>Add player</button>
 		</form>

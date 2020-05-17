@@ -1,0 +1,22 @@
+.player-img img {
+	width: 50%;
+	padding: 30px 180px;
+}
+.player-info {
+	background: black;
+	color: white;
+	position: absolute;
+	left: 39%;
+	top: 333px;
+	font-size: 20px;
+	padding-bottom: 17px;
+	padding-left: 300px;
+	padding-right: 250px;
+
+}
+.player-info h1 {
+	padding-top: 20px;
+}
+.player-info img {
+	width: 40px;
+}

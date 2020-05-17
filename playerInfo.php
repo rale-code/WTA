@@ -1,20 +1,9 @@
 <?php
-include_once 'includes/database.php';
+	$id = $_GET['id'];
 
-$id = $_GET['id'];
+	include 'query/player.php';
 
-
-
-$players = null;
-$sql = "SELECT player.name, player.points, player.rank, country.country, player.player_image, country_image, player.player_id
-		FROM player
-		INNER JOIN country
-		ON player.country_id=country.country_id
-		WHERE player_id='$id'";
-		$result = $conn->query($sql);
-		while ($row = $result->fetch_assoc()) {
-		$players[] = $row;
-	}
+	$players = getPlayersById();
 
 
 ?>
@@ -27,30 +16,23 @@ $sql = "SELECT player.name, player.points, player.rank, country.country, player.
 </head>
 	<link rel="stylesheet" type="text/css" href="CSS/nav.css">
 	<link href="https://fonts.googleapis.com/css2?family=Raleway:wght@500&display=swap" rel="stylesheet">
-	<link rel="stylesheet" type="text/css" href="style.css">
+	<link rel="stylesheet" type="text/css" href="info.css">
 	<script src="https://kit.fontawesome.com/d3d792014f.js" crossorigin="anonymous"></script>
 <body>
 	<?php 
-			$title = "Active players";
+			$title = "More  about";
 			include 'templates/nav.php'
 		?>
-		<main>
-			<div name="country_select">
-				<form action="query/selectByCountry.php" method="post">
-					<input type="text" name="name">
-					<button>Select</button>
-				</form>
-			</div>
-			<?php foreach((array)$players as $player): ?>
-			<a href="playerinfo.php?id=<?= $player['player_id'] ?>">	
-				<div class="player">
+			<?php foreach((array)$players as $player): ?>	
+				<div class="player-img">
 					<img src="<?= $player['player_image']; ?>">
-					<h4><?= $player['rank']; ?></h4>
-					<h4><?= $player['name'] ?></h4>
-					<h6><?= $player['points']; ?></h6>
-					<h5><img src="<?= $player['country_image'] ?>"><?= $player['country']  ?></h5>
 				</div>
-			</a>
+				<div class="player-info">
+					<h1>Rank<br><?= $player['rank']; ?></h1>
+					<h1>Name<br><?= $player['name'] ?></h1>
+					<h1>Points<br><?= $player['points']; ?></h1>
+					<h1>Country<br><img src="<?= $player['country_image'] ?>"><?= $player['country']  ?></h1>
+				</div>
 			<?php endforeach ?>
 		</main>
 		<?php include 'templates/footer.php'?>

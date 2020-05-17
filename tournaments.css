@@ -3,14 +3,36 @@
 }
 
 .container img {
-	width: 25%;
-	margin: 0px 150px;
+	width: 55%;
+	margin: 0px 120px;
 	margin-top: 50px;
 }
 .container {
-	position: relative;
+	display: inline-block;
+	width: 33%;
 }
 .tournament {
-	margin: 0px 190px; 
+	margin: 0px 175px; 
 	
+}
+
+h1 {
+	margin-left: 80px;
+	margin-top: 20px;
+}
+h2 {
+	margin-left: 30px;
+}
+
+.container:hover {
+	color: black;
+}
+
+.picture h1 {
+	color: white;
+	position: absolute;
+	top: 140px;
+	left: 35%;
+	font-size: 54px;
+	font-weight: bold;
 }
