@@ -169,3 +169,10 @@ footer img{
 	opacity: 50%;
 	margin-bottom: 10px;
 }
+
+button {
+	border: none;
+	outline: none;
+	overflow: hidden;
+	background: black;
+}

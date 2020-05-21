@@ -1,7 +1,7 @@
 <?php
 	include 'query/player.php';
 	
-	$players = getAllPlayers();
+	$players = searchPlayers();
 ?>
 <!DOCTYPE html>
 <html>

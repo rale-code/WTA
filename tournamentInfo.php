@@ -11,7 +11,7 @@
 	<title>Tournamets</title>
 	<script src="https://kit.fontawesome.com/d3d792014f.js" crossorigin="anonymous"></script>
 	<link rel="stylesheet" type="text/css" href="CSS/nav.css">
-	<link rel="stylesheet" type="text/css" href="tournamentInfo.css">
+	<link rel="stylesheet" type="text/css" href="CSS/tournamentInfo.css">
 	<link href="https://fonts.googleapis.com/css2?family=Raleway:wght@500&display=swap" rel="stylesheet">
 </head>
 <body>

@@ -6,12 +6,7 @@
 				<li><a class="cool-link" href="tournaments.php">Tournaments</a></li>
 			</ul>
 		</nav>
-		<div class="search-box">
-			<input type="text" name="search" class="search-txt" placeholder="Search...">
-			<a href="#" class="search-btn">
-				<i class="fas fa-search"></i>
-			</a>
-		</div>	
+		<?= $search ?>
 </header> 
 <div class="picture">
 		<img src="https://images.ctfassets.net/usf1vwtuqyxm/dpmDSBWkWGFebViZKJuG7/c488da0a5c57abcaf6dcade349d14347/Feature-Hub-Copy-compressor.png?fm=jpg">
