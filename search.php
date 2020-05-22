@@ -1,6 +1,6 @@
 <?php
 	include 'query/player.php';
-	
+
 	$players = searchPlayers();
 ?>
 <!DOCTYPE html>
@@ -14,16 +14,8 @@
 </head>
 	<body>
 
-		<?php 
+		<?php
 			$title = "Active players";
-			$search = <<<EOD
-			<div class="search-box"><form action="search.php" method="post">
-				<input type="text" name="search" class="search-txt" placeholder="Search...">
-				<button class="search-btn">
-					<i class="fas fa-search"></i>
-				</button>
-			</form>	</div>
-			EOD;;
 			include 'templates/nav.php'
 		?>
 
@@ -43,7 +35,7 @@
 				</form>
 			</div>
 			<?php foreach((array)$players as $player): ?>
-			<a href="playerInfo.php?id=<?php echo $player['player_id']; ?>">	
+			<a href="playerInfo.php?id=<?php echo $player['player_id']; ?>">
 				<div class="player">
 					<img src="<?= $player['player_image']; ?>">
 					<h4><?= $player['rank']; ?></h4>

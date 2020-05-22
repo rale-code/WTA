@@ -16,22 +16,21 @@ header {
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
-	padding: 15px 6%; 
+	padding: 15px 6%;
 }
 
 .logo {
-	width: 11%;
-	cursor: pointer;
+	width: 30%;
 }
 
 .link {
 	list-style: none;
-	margin-left: 20px;
+	margin-right: 370px;
 }
 
 .link li {
 	display: inline-block;
-	padding: 0px 25px; 
+	padding: 0px 25px;
 }
 
 .link li a {
@@ -85,7 +84,7 @@ header {
 	padding: 0;
 	color: white;
 	font-size: 16px;
-	transition: 0.4s; 
+	transition: 0.4s;
 	line-height: 15px;
 	width: 160px;
 }
@@ -115,7 +114,7 @@ header {
 }
 
 .media-btn {
-	display: inline-block;	
+	display: inline-block;
 	width: 90px;
 	height: 90px;
 	background: #f1f1f1;
@@ -123,12 +122,12 @@ header {
 	border-radius: 30%;
 	box-shadow: 0 5px 15px -5px #00000070;
 	color: #F0F8FF;
-	overflow: hidden; 
+	overflow: hidden;
 	position: relative;
 }
 .media-btn i{
 	line-height: 90px;
-	
+
 	font-size: 26px;
 }
 .media-btn:hover i{
@@ -150,7 +149,7 @@ header {
 }
 
 #instagram {
-	background: #E9967A;	
+	background: #E9967A;
 }
 
 #weibo {

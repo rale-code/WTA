@@ -19,11 +19,11 @@
 	<link rel="stylesheet" type="text/css" href="CSS/info.css">
 	<script src="https://kit.fontawesome.com/d3d792014f.js" crossorigin="anonymous"></script>
 <body>
-	<?php 
+	<?php
 			$title = "More  about";
 			include 'templates/nav.php'
 		?>
-			<?php foreach((array)$players as $player): ?>	
+			<?php foreach((array)$players as $player): ?>
 				<div class="player-img">
 					<img src="<?= $player['player_image']; ?>">
 				</div>
@@ -39,7 +39,7 @@
 		<form action="includes/importPlayers.php" method="post">
 			<button>Add player</button>
 		</form>
-	
+
 
 </body>
 </html>

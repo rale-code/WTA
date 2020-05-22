@@ -1,4 +1,4 @@
-<?php 
+<?php
 	include 'query/tournament.php';
 
 	$tournaments = getTournamentsById();
@@ -15,12 +15,12 @@
 	<link href="https://fonts.googleapis.com/css2?family=Raleway:wght@500&display=swap" rel="stylesheet">
 </head>
 <body>
-	<?php 
+	<?php
 		$title = "Tournament";
 		include 'templates/nav.php'
 	?>
 	<main>
-		<?php foreach ($tournaments as $tournament): ?> 
+		<?php foreach ($tournaments as $tournament): ?>
 			<div class="container">
 				<img src="<?= $tournament['img']  ?>">
 				<h2><?= $tournament['tournament_name']  ?></h2>

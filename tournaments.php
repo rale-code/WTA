@@ -1,4 +1,4 @@
-<?php 
+<?php
 	include 'query/tournament.php';
 
 	$mayTournaments = getMayTournaments();
@@ -17,7 +17,7 @@
 	<link href="https://fonts.googleapis.com/css2?family=Raleway:wght@500&display=swap" rel="stylesheet">
 </head>
 <body>
-	<?php 
+	<?php
 		$title = "Tournaments";
 		include 'templates/nav.php'
 	?>

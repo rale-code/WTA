@@ -16,7 +16,7 @@
 	<script src="https://kit.fontawesome.com/d3d792014f.js" crossorigin="anonymous"></script>
 </head>
 	<body>
-		<?php 
+		<?php
 			$title = "Active players";
 			include 'templates/nav.php'
 		?>
